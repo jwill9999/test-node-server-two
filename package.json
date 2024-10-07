@@ -1,0 +1,38 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/www",
+  "scripts": {
+    "start": "NODE_ENV=local npx npm run watch:files:dev",
+    "start:production": "NODE_ENV=production npx nodemon dist/src/",
+    "watch:files:dev": "npx nodemon --watch  './src/**/*.ts' --watch './routes'/**/*.ts  --ext ts  --ignore './src/**/*.spec.ts' --exec 'ts-node' bin/www",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.7.4",
+    "@types/serve-favicon": "^2.5.7",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@types/pg": "^8.11.10",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.0",
+    "serve-favicon": "^2.5.0",
+    "wait-port": "^1.1.0"
+  }
+}
